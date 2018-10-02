@@ -6,10 +6,7 @@ Add Domain Forest
 ############################
 #   Function
 ############################
-    .FUNCTIONALITY
-       Generates random passwords
-  
-    #>
+function New-SWRandomPassword {
     [CmdletBinding(DefaultParameterSetName='FixedLength',ConfirmImpact='None')]
     [OutputType([String])]
     Param
@@ -106,7 +103,6 @@ Add Domain Forest
         }
     }
 }
-
 
 ###################################################################
 
