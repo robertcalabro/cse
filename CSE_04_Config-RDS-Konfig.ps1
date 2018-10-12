@@ -12,11 +12,11 @@ if (!(Test-Path $tmpDir)) { mkdir $tmpDir -force}
 
 Start-Transcript "$tmpDir\ScriptExtension_DNS.log" -Append
 
-$RDSLS= '1azsrvdc01.mc-demo.de'  # Lizenz-Server
-$RDSCB= '1azsrvrdsgw01.mc-demo.de'  # Verbindungsbroker
-$RDSWA= '1azsrvrdsgw01.mc-demo.de'  # Web Access
-$RDSSH= '1azsrvrds01.mc-demo.de' # RDShosts
-$RDSGW= '1azsrvrdsgw01' # Gateway - Server
+$RDSLS= 'azsrvdc01.mc-demo.de'  # Lizenz-Server
+$RDSCB= 'azsrvrdsgw01.mc-demo.de'  # Verbindungsbroker
+$RDSWA= 'azsrvrdsgw01.mc-demo.de'  # Web Access
+$RDSSH= 'azsrvrds01.mc-demo.de' # RDShosts
+$RDSGW= 'azsrvrdsgw01' # Gateway - Server
 
 #RDS Rollen installieren
 New-RDSessionDeployment -ConnectionBroker $RDSCB -SessionHost $RDSSH -WebAccessServer $RDSWA -Verbos
