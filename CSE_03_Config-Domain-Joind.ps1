@@ -1,4 +1,4 @@
-﻿<#
+<#
 this custom script extension configer DNS.
 
 #>
@@ -15,9 +15,9 @@ Start-Transcript "$tmpDir\ScriptExtension_DNS.log" -Append
 #Domain Joind
 $domain = "mc-demo.de"
 $password = "Welcome2018!" | ConvertTo-SecureString -asPlainText -Force
-$username = "$domain\Deployment" 
+$username = "mc-demo\Deployment" 
 $credential = New-Object System.Management.Automation.PSCredential($username,$password)
-Add-Computer -DomainName $domain -Credential $credential
+Add-Computer -DomainName $domain -Credential $credential -Restart
 
 
 Stop-Transcript
