@@ -12,11 +12,11 @@ if (!(Test-Path $tmpDir)) { mkdir $tmpDir -force}
 
 Start-Transcript "$tmpDir\ScriptExtension_RDSConfig.log" -Append
 
-$RDSLS= 'azsrvdc01.mc-demo.de'  # Lizenz-Server
-$RDSCB= 'azsrvrdsgw01.mc-demo.de'  # Verbindungsbroker
-$RDSWA= 'azsrvrdsgw01.mc-demo.de'  # Web Access
-$RDSSH= 'azsrvrds01.mc-demo.de' # RDShosts
-$RDSGW= 'azsrvrdsgw01' # Gateway - Server
+$RDSLS = 'azsrvdc01.mc-demo.de'  # Lizenz-Server
+$RDSCB = 'azsrvrdsgw01.mc-demo.de'  # Verbindungsbroker
+$RDSWA = 'azsrvrdsgw01.mc-demo.de'  # Web Access
+$RDSSH = 'azsrvrds01.mc-demo.de' # RDShosts
+$RDSGW = 'azsrvrdsgw01' # Gateway - Server
 
 #Import RDS Modul
 Import-Module RemoteDesktop
@@ -25,7 +25,7 @@ Import-Module RemoteDesktop
 New-RDSessionDeployment -ConnectionBroker $RDSCB -SessionHost $RDSSH -WebAccessServer $RDSWA -Verbos
 
 #Verbindung zum Broker
-#Get-RDServer -ConnectionBroker $RDSCB
+Get-RDServer -ConnectionBroker $RDSCB
 
 #Lizenz Server hinzufügen
 Add-RDServer -Role RDS-LICENSING -Server $RDSLS -ConnectionBroker $RDSCB -Verbose
