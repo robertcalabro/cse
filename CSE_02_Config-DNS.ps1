@@ -1,5 +1,5 @@
 <#
-this custom script extension configer DNS.
+this custom script extension configer DC DNS.
 
 #>
 ########################################################################################
@@ -151,6 +151,9 @@ ipconfig /registerdns
 
 #DNS Eintrag auf die Server IP änderen
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet 2" -ResetServerAddresses
+
+#Deaktivierung Windwos Firewall
+Set-NetFirewallProfile -Enabled True
 
 #Erstellen eines AD Admin
 $password = "Welcome2018!" | ConvertTo-SecureString -AsPlainText -Force
