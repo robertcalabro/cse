@@ -10,7 +10,7 @@ $tmpDir = "c:\temp\"
 #create folder if it doesn't exist
 if (!(Test-Path $tmpDir)) { mkdir $tmpDir -force}
 
-Start-Transcript "$tmpDir\ScriptExtension_DNS.log" -Append
+Start-Transcript "$tmpDir\ScriptExtension_DomainJoind.log" -Append
 
 #Domain Joind
 $domain = "mc-demo.de"
