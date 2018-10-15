@@ -10,7 +10,7 @@ $tmpDir = "c:\temp\"
 #create folder if it doesn't exist
 if (!(Test-Path $tmpDir)) { mkdir $tmpDir -force}
 
-Start-Transcript "$tmpDir\ScriptExtension_DNS.log" -Append
+Start-Transcript "$tmpDir\ScriptExtension_RDSConfig.log" -Append
 
 $RDSLS= 'azsrvdc01.mc-demo.de'  # Lizenz-Server
 $RDSCB= 'azsrvrdsgw01.mc-demo.de'  # Verbindungsbroker
