@@ -1,4 +1,4 @@
-﻿<#
+<#
 this custom script extension configer RDS Host.
 
 #>
@@ -17,6 +17,9 @@ $RDSCB= 'azsrvrdsgw01.mc-demo.de'  # Verbindungsbroker
 $RDSWA= 'azsrvrdsgw01.mc-demo.de'  # Web Access
 $RDSSH= 'azsrvrds01.mc-demo.de' # RDShosts
 $RDSGW= 'azsrvrdsgw01' # Gateway - Server
+
+#Import RDS Modul
+Import-Module RemoteDesktop
 
 #RDS Rollen installieren
 New-RDSessionDeployment -ConnectionBroker $RDSCB -SessionHost $RDSSH -WebAccessServer $RDSWA -Verbos
