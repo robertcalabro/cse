@@ -35,6 +35,9 @@ Set-RDLicenseConfiguration -Mode PerUser -LicenseServer $RDSLS -ConnectionBroker
 #Neue Collection anlegen
 New-RDSessionCollection -CollectionName 'RDS SessionCollection' -SessionHost $RDSSH -ConnectionBroker $RDSCB -CollectionDescription 'This Collection is for Desktop Sessions'
 
+#Installaiton RDS Gateway
+#Install-WindowsFeature -Name RDS-Gateway -Verbose -IncludeManagementTools -IncludeAllSubFeature
+
 #Neustart der Server
 Restart-Computer -ComputerName $RDSCB,$RDSWA,$RDSSH -Force
 
