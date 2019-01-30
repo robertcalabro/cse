@@ -137,6 +137,6 @@ $pwd = New-SWRandomPassword -MinPasswordLength 8 -MaxPasswordLength 12
 $SecurePassword = ConvertTo-SecureString $pwd -AsPlainText -Force
 
 #Install AD Forest
-Install-ADDSForest -DomainName mc-demo.de -DomainNetBiosName mc-demo -DomainMode WinThreshold -ForestMode WinThreshold -SkipPreChecks -DatabasePath $ADPathDir -InstallDns:$true -SafeModeAdministratorPassword $SecurePassword -Force
+Install-ADDSForest -DomainName framos.at -DomainNetBiosName framos -DomainMode WinThreshold -ForestMode WinThreshold -SkipPreChecks -DatabasePath $ADPathDir -InstallDns:$true -SafeModeAdministratorPassword $SecurePassword -Force
 
 Stop-Transcript
